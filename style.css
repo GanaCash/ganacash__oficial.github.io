@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilo de la Navbar */
+header {
+    background-color: #ff8800;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+header .logo img {
+    max-width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de las secciones */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #ff8800;
+}
+
+.download-button, .contact-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff8800;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.download-button:hover, .contact-button:hover {
+    background-color: #e07e00;
+}
+
+/* Estilo de la política de privacidad */
+.privacy-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    display: none; /* Oculta por defecto */
+}
+
+.toggle-privacy {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Estilo de Nuestras Aplicaciones */
+.app-info img {
+    max-width: 100%;  /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;     /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* O cualquier estilo que prefieras */
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #ff8800;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo de los íconos de redes sociales */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+/* Estilos para el menú hamburguesa */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin: 3px 0;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Oculta el menú en móviles */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #ff8800;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: flex; /* Muestra el menú en móviles cuando está activo */
+    }
+
+    .burger {
+        display: flex; /* Muestra el menú hamburguesa en móviles */
+    }
+}
